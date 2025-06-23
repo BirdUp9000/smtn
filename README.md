@@ -1,6 +1,10 @@
 # ✉️ SMTN - Simple Mail Terminal Notification
 **SMTN** is a lightweight Bash script that periodically checks your email inboxes via IMAP over SSL and displays the number of unread messages every time you open a new terminal session.
 
+> [!WARNING]
+>
+> Most email providers (like Gmail, Yahoo, Outlook, etc.) require you to enable two-factor authentication (2FA) and generate an app-specific password in order to access your mailbox via external applications or scripts. Regular account passwords often won’t work for IMAP access. Be sure to check your provider’s security settings and create an app password for SMTN.
+
 ## 📦 Dependencies
 - bash
 - OpenSSL
