@@ -1,13 +1,9 @@
 # ✉️ SMTN - Simple Mail Terminal Notification
 **SMTN** is a lightweight Bash script that periodically checks your email inboxes via IMAP over SSL and displays the number of unread messages every time you open a new terminal session.
 
----
-
 ## 📦 Dependencies
 - bash
 - OpenSSL
-
----
 
 ## ✨ Features
 - Works with multiple mail providers (Gmail, Yahoo, Outlook, etc.)
@@ -15,8 +11,6 @@
 - Background daemon with configurable refresh interval
 - Displays unread message count on terminal startup
 - Pure Bash + OpenSSL – no extra dependencies
-
----
 
 ## 🛠️ Installation
 1. Copy ```smtn-daemon.sh``` into ```~/bin```.
@@ -28,8 +22,6 @@ if [[ -f "$HOME/.cache/smtn/mail" ]]; then
   echo "📬 Unread mail: $(<"$HOME/.cache/smtn/mail")"
 fi
 ```
-
----
 
 ## 🧩 Configuration
 The first time you run the script, a config file will be created at:``` ~/.config/smtn/config ```. <br>
@@ -51,8 +43,6 @@ SMTN_OUTLOOK_APP_PASSWORD="your_app_password"
 # Add as many accounts as you want using the same structure.
 ```
 
----
-
 ## 🔄 How It Works
 * The daemon (```smtn-daemon.sh```) runs continuously in the background.
 * Every ```MAILBOX_REFRESH_RATE``` seconds, it connects to each IMAP server and issues: <br>
@@ -60,8 +50,6 @@ SMTN_OUTLOOK_APP_PASSWORD="your_app_password"
 * It extracts the unread mail count and writes it to: <br>
 ```~/.cache/smtn/mail```
 * Your shell reads and displays this value on terminal startup.
-
----
 
 ## 📤 Supported IMAP Servers
 You can use **SMTN** with:
@@ -74,8 +62,6 @@ You can use **SMTN** with:
 * Mail.ru
 * ProtonMail (with Proton Bridge)
 * And many more.
-
----
 
 ## ✅ License
 MIT — do whatever you want.
